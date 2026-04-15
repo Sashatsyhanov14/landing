@@ -243,6 +243,13 @@ nav {
     color: var(--primary);
 }
 
+.nav-links a .material-symbols-outlined {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Buttons */
 .btn {
     padding: 12px 24px;
@@ -645,6 +652,12 @@ footer {
     }
 
     .grid-2, .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .solution-card {
+        padding: 24px !important;
         gap: 16px !important;
     }
 
