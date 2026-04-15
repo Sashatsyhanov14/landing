@@ -58,7 +58,6 @@ section {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    overflow: hidden;
 }
 
 .section-full-width {
@@ -580,15 +579,14 @@ footer {
         padding: 0 !important;
     }
 
-    /* Brute force hide buttons and logos we don't want */
-    nav button, .lead-button, .logo-img {
+    /* Reposition or resize elements rather than hard hiding */
+    .logo-img {
         display: none !important;
     }
 
     section, .section-full-width {
         padding: 40px 16px;
         width: 100% !important;
-        overflow: hidden !important;
     }
 
     nav {
