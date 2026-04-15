@@ -532,6 +532,37 @@ footer {
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
 }
 
+/* CTA Numbers */
+.cta-numbers-container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-number-block {
+    text-align: center;
+}
+
+.cta-number {
+    font-family: var(--font-headline);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.cta-number-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: var(--on-surface-variant);
+}
+
+.cta-divider {
+    width: 1px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
 /* --- Mobile Optimization --- */
 @media (max-width: 768px) {
     html, body {
@@ -542,18 +573,14 @@ footer {
         padding: 0 !important;
     }
 
-    /* Brute force hide ALL buttons in nav */
-    nav button, .lead-button {
+    /* Brute force hide buttons and logos we don't want */
+    nav button, .lead-button, .logo-img {
         display: none !important;
-        height: 0 !important;
-        width: 0 !important;
-        overflow: hidden !important;
     }
 
     section, .section-full-width {
         padding: 40px 16px;
         width: 100% !important;
-        max-width: 100% !important;
         overflow: hidden !important;
     }
 
@@ -562,84 +589,66 @@ footer {
         justify-content: space-between !important;
         height: auto;
         display: flex !important;
+        flex-direction: row !important; /* Back to row as requested */
+        gap: 0;
     }
 
     .nav-links {
         display: flex !important;
-        width: 100% !important;
-        order: 3;
-        justify-content: space-between !important;
+        width: auto !important;
+        order: 2;
+        justify-content: flex-end !important;
         gap: 12px !important;
-        margin-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        padding-top: 12px !important;
-        overflow-x: auto;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
     }
 
     .nav-links a {
-        font-size: 9px !important;
-        letter-spacing: 0.1em;
+        font-size: 8px !important;
+        letter-spacing: 0.05em !important;
         white-space: nowrap !important;
-        color: var(--on-surface) !important;
     }
 
     .logo {
-        margin: 0 !important;
-        gap: 8px !important;
-        flex: 1;
+        width: auto !important;
         justify-content: flex-start !important;
-    }
-
-    .logo-img {
-        height: 24px !important;
-    }
-
-    .hero {
-        padding-top: 100px !important;
-        width: 100% !important;
-    }
-
-    .hero h1 {
-        font-size: clamp(1.8rem, 10vw, 2.5rem) !important;
-        margin-bottom: 20px !important;
-    }
-
-    h2 {
-        font-size: clamp(1.4rem, 8vw, 1.8rem) !important;
-    }
-
-    .grid-2, .grid-3 {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-        width: 100% !important;
-    }
-
-    .feature-card {
-        padding: 24px !important;
-        width: 100% !important;
         margin: 0 !important;
+        order: 1;
+        flex: 1;
     }
 
-    /* Highlight all titles in results */
-    .glass-panel-error h4, .glass-panel-critical h4 {
-        color: var(--error) !important;
+    .logo h2 {
         font-size: 1rem !important;
     }
 
-    .btn {
-        width: 100% !important;
-        padding: 16px 24px !important;
-        font-size: 12px !important;
+    .cta-numbers-container {
+        gap: 24px;
+        flex-wrap: nowrap;
     }
 
-    .mobile-gap-fix {
-        margin-top: 32px !important;
+    .cta-number {
+        font-size: 2.2rem;
     }
 
-    /* Universal overflow preventer */
+    .cta-divider {
+        height: 60px;
+    }
+
+    .hero {
+        padding-top: 80px !important;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(1.6rem, 10vw, 2.2rem) !important;
+    }
+
+    .grid-2, .grid-3 {
+        gap: 16px !important;
+    }
+
     * {
         max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 }
