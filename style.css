@@ -430,6 +430,12 @@ nav {
     flex-shrink: 0;
 }
 
+/* Dominance Heading */
+.dominance-heading {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+}
+
 /* Footer */
 footer {
     padding: 100px 6%;
@@ -610,8 +616,8 @@ footer {
     }
 
     .nav-links a {
-        font-size: 8px !important;
-        letter-spacing: 0.05em !important;
+        font-size: 7px !important;
+        letter-spacing: 0.1em !important;
         white-space: nowrap !important;
     }
 
@@ -661,5 +667,42 @@ footer {
 
     * {
         max-width: 100% !important;
+    }
+
+    /* Fixed clipping for Dominance Heading on mobile */
+    .dominance-heading {
+        font-size: clamp(1.4rem, 7vw, 2rem) !important;
+        line-height: 1.1 !important;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    footer {
+        padding: 40px 16px !important;
+        gap: 32px !important;
+    }
+
+    .footer-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 32px !important;
+    }
+
+    .footer-content > div {
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    footer .nav-links {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .footer-content div[style*="opacity: 0.4"] {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 20px;
     }
 }
