@@ -36,8 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { passive: true });
 
-    // Apply reveal class to sections and cards
-    const revealElements = document.querySelectorAll('section, .glass-panel, h1, h2, .badge');
+    // Apply reveal class to sections and cards with staggering
+    const gridContainers = document.querySelectorAll('.grid-2, .grid-3');
+    gridContainers.forEach(container => {
+        const children = container.children;
+        Array.from(children).forEach(child => {
+            child.classList.add('stagger-item');
+        });
+    });
+
+    const revealElements = document.querySelectorAll('section, .glass-panel, h1, h2, .badge, .hero p, .hero .btn');
     revealElements.forEach(el => {
         el.classList.add('reveal');
         observer.observe(el);
