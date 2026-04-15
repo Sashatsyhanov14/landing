@@ -60,6 +60,10 @@ section {
     width: 100%;
 }
 
+.pricing-cta-button {
+    margin-bottom: 32px;
+}
+
 .section-full-width {
     background: var(--surface);
     padding: 140px 6%;
