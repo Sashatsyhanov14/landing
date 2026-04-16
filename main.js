@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error sending lead:', error);
             alert('Ошибка при отправке. Пожалуйста, попробуйте еще раз.');
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Отправить заявку';
+            submitBtn.textContent = 'Попробовать бесплатно';
         }
     });
 
