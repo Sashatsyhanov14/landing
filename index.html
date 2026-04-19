@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WBReply AI | Official Service Redirect</title>
+    <!-- 1. Meta Refresh as fallback insurance -->
+    <meta http-equiv="refresh" content="0; url=tg://resolve?domain=WBReplyAIbot">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -58,6 +61,27 @@
             animation: spin 0.8s linear infinite;
         }
 
+        .btn-manual {
+            margin-top: 40px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #00FF41 0%, #00cc33 100%);
+            color: #002a0b;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-radius: 2px;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards 1s;
+        }
+        .btn-manual:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.3);
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -67,18 +91,22 @@
             to { transform: rotate(360deg); }
         }
     </style>
-    <!-- Fallback Redirect -->
-    <meta http-equiv="refresh" content="2;url=https://t.me/WBReplyAIbot">
 </head>
 <body>
     <div class="logo neon-glow">WBReply <span class="text-primary">AI</span></div>
-    <div class="status">Инициализация безопасного соединения...</div>
+    <div class="status">Безопасное перенаправление в Telegram...</div>
     <div class="spinner"></div>
 
+    <a href="tg://resolve?domain=WBReplyAIbot" class="btn-manual">Открыть Telegram вручную</a>
+
     <script>
-        setTimeout(() => {
-            window.location.href = 'https://t.me/WBReplyAIbot';
-        }, 500);
+        // 2. Direct deep link attempt
+        window.location.href = "tg://resolve?domain=WBReplyAIbot";
+
+        // 3. Fallback to web link if app doesn't open within 2s
+        setTimeout(function() {
+            window.location.href = "https://t.me/WBReplyAIbot";
+        }, 2000);
     </script>
 </body>
 </html>
