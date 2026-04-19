@@ -100,8 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const leadButtons = document.querySelectorAll('.lead-button');
     leadButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            openModal(e);
-            
             // Analytics Tracking
             if (typeof ym !== 'undefined') {
                 ym(XXXXXXXX, 'reachGoal', 'LEAD_CLICK');

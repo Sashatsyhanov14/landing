@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBReply AI | Official Service Redirect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00FF41;
+            --background: #050505;
+            --on-surface: #ffffff;
+            --on-surface-variant: #a3a3a3;
+        }
+        body {
+            background: var(--background);
+            color: var(--on-surface);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .text-primary { color: var(--primary); }
+        .neon-glow { text-shadow: 0 0 15px rgba(0, 255, 65, 0.3); }
+        
+        .status {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--on-surface-variant);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards 0.2s;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 255, 65, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            margin: 32px auto;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- Fallback Redirect -->
+    <meta http-equiv="refresh" content="2;url=https://t.me/WBReplyAIbot">
+</head>
+<body>
+    <div class="logo neon-glow">WBReply <span class="text-primary">AI</span></div>
+    <div class="status">Инициализация безопасного соединения...</div>
+    <div class="spinner"></div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = 'https://t.me/WBReplyAIbot';
+        }, 800);
+    </script>
+</body>
+</html>
